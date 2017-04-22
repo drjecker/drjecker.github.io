@@ -1,0 +1,88 @@
+.nav {
+	li {
+		float:left;
+		width:auto;
+		width:25%;
+		margin:0;
+		a {
+			display:block;
+			padding: 0.4rem 0.5rem;
+			text-decoration: none;
+			font-weight:bold;
+			color: $color__text;
+			font-size:1.4rem;
+			text-align:center;
+			border:none;
+			&:hover, &:focus {
+
+			}
+		}
+}
+}
+
+@media screen and (min-width: $bp-med) {
+
+	nav[role="navigation"]{
+		position:absolute;
+		top:1rem;
+		left:6rem;
+	}
+
+	.nav {
+		border: 0;
+		margin:0 auto;
+		li {
+			float: left;
+			position: relative;
+			width:auto;
+			a {
+				transition-property:background;
+				background:none;
+				font-size:1.1rem;
+				border:3px solid rgba(255,255,255,0.3);
+
+				&:hover, &:focus {
+					border:3px solid rgba(255,255,255,0.3);
+					background-color: #333;
+					color:#fff;
+				}
+
+			}
+			&.current a{
+			color:#fff;
+			}
+			&:first-child a:hover, &.current:first-child a{
+			background: $drjecker-pink;
+			}
+			&:nth-child(2) a:hover, &.current:nth-child(2) a{
+			background: $drjecker-orange;
+			}
+			&:nth-child(3) a:hover, &.current:nth-child(3) a{
+			background:$drjecker-green;
+			}
+			&:last-child a:hover, &:nth-child(4) a:hover, &.current:nth-child(4) a{
+			background: $drjecker-blue;
+			}
+	}
+
+	}
+}
+
+@media screen and (min-width: $bp-large) {
+	nav[role="navigation"]{
+		position:relative;
+		border-top:2px dotted #ddd;
+		border-bottom:2px dotted #ddd;
+		margin:20% auto 0;
+		left:0;
+		width:80%;
+
+	}
+
+	.nav {
+			margin:1rem 2%;
+		li{
+			width:24%;
+		}
+	}
+}

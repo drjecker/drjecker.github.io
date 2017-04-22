@@ -1,0 +1,42 @@
+a {
+	color: $color__link;
+	border-bottom:2px dotted rgba(255,255,255,0.25);
+	text-decoration:none;
+	transition:all 0.2s ease;
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+		border-bottom:2px dotted rgba(0,0,0,0);
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+.back-to-top{
+    width:4em;
+    height:4em;
+    position:fixed;
+    bottom:2rem;
+    right:1rem;
+    display:none;
+    text-indent:-9999px;
+    background:transparent url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2056%2056%22%3E%0A%20%20%3Cpath%20d%3D%22M28%2014c-7.732%200-16%206.268-16%2014%200%207.73%208.267%2014%2016%2014%207.733%200%2014-6.27%2014-14%200-7.732-6.267-14-14-14zm2%2015v6h-4v-6h-5.517L28%2019.99%2035.516%2029H30z%22%20fill%3D%22%23fff%22%2F%3E%0A%3C%2Fsvg%3E') no-repeat;
+    background-size:4em;
+    border-bottom:0;
+}
+
+@media screen and (min-width: $bp-med) {
+	.back-to-top{
+		position:absolute;
+		left:-9999px;
+	}
+}

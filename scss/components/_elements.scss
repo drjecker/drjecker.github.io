@@ -1,0 +1,33 @@
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background:$white;
+}
+
+p{
+	line-height:1.3em;
+}
+
+ul{
+	padding:0;
+	list-style-type: none;
+	li{
+		line-height: 1.3em;
+		margin:0 0 0.75em;
+	}
+}
+
+img,
+svg{
+	max-width: 100%;
+	height:auto;
+}

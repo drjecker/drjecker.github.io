@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+Colors
+--------------------------------------------------------------*/
+$black:             	#000;
+$white:             	#fff;
+$light-gray:			#999;
+
+$drjecker-pink:			#C95E62;
+$drjecker-green:    	#A3C46A;
+$drjecker-orange:		#E29600;
+$drjecker-blue:			#6EADCF;
+
+$color__background:		$white;
+
+$color__text:			#565656;
+
+$color__link:        	$white;
+$color__link-visited:   $white;
+$color__link-hover:     $white;
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+$sans-serif:        "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$header-serif:		"Courgette", cursive;
+
+
+/*--------------------------------------------------------------
+Breakpoints
+--------------------------------------------------------------*/
+$bp-small : 20em;
+$bp-med : 46.8em;
+$bp-large : 70.313em;
+$bp-xl : 92.500em;
