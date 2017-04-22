@@ -1,18 +1,17 @@
 /* TEAM */
 
-Chief Pixel Surgeon: Dr. J. Ecker                           
-Contact: www.shinesandjecker.com/contact/                          
-Twitter: @drjecker                         
+Chief Pixel Surgeon: Dr. J. Ecker
+Contact: shinesandjecker.com/contact/
+Twitter: @drjecker
 Location: Portland, Maine, USA
 
 /* SITE */
 
 Standards: HTML5, CSS3
 
-Components: 
+Components:
 jQuery: 		http://jquery.com
-Modernizr: 		http://modernizr.com
 iconmonstr: 	http://iconmonstr.com/
 jQuery-One-Page-Nav:	https://github.com/davist11/jQuery-One-Page-Nav
-
-Software: WordPress
+Scrollto: http://flesler.blogspot.com
+jQuery Easing: http://gsgd.co.uk/sandbox/jquery/easing/
