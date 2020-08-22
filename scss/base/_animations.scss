@@ -1,0 +1,126 @@
+.petal {
+	animation-duration: 10s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+.petal--center {
+	animation-name: fallpetalcenter;
+	animation-duration: 10s;
+	transform-origin: 87.25px 155.5px;
+}
+
+.petal--left{
+	animation-delay: 16s;
+	animation-duration: 12s;
+	animation-name: fallpetalleft;
+	transform-origin: 43.5px 246.25px;
+}
+
+.petal--right {
+	animation-delay: 32s;
+	animation-duration: 14s;
+	animation-name: fallpetalright;
+	transform-origin: 141.75px 120px;
+}
+
+.petal--center-bottom {
+	animation-delay: 52s;
+	animation-duration: 12s;
+	animation-name: fallpetalcenterbottom;
+	transform-origin: 87.75px 161.25px;
+}
+
+@media (prefers-reduced-motion) {
+	.petal--center,
+	.petal--left,
+	.petal--right,
+	.petal--center-bottom {
+		animation: none;
+	}
+}
+
+ @keyframes fallpetalcenter {
+	0% {
+	   transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(-20deg) ;
+	}
+	40% {
+		transform: rotate(-80deg);
+		transform-origin: 87.25px 155.5px;
+	}
+	95% {
+		transform: rotate(-4deg) translateY(337px);
+		transform-origin: 85.75px 496px;
+	}
+	100% {
+		transform: rotate(-38deg) translateY(337px);
+		transform-origin: 85.75px 496px;
+	}
+ }
+
+@keyframes fallpetalleft {
+	0% {
+	   transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(20deg);
+	}
+	60% {
+		transform: rotate(85deg) ;
+		transform-origin: 43.5px 246.25px;
+	}
+	94% {
+		transform: rotate(33deg) translateY(242px);
+		transform-origin: 28.5px 473.5px;
+	}
+	 100% {
+		transform: rotate(33deg) translateY(242px);
+		transform-origin: 28.5px 473.5px;	
+	 }
+ }
+
+ @keyframes fallpetalright {
+	0% {
+	   transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(-20deg);
+	}
+	40% {
+		transform: rotate(-55deg) ;
+		transform-origin: 141.75px 120px;
+	}
+	90% {
+		transform: rotate(-25deg) translateY(376px);
+		transform-origin: 133.25px 495px;
+	}
+	 100% {
+		transform: rotate(-32deg) translateY(376px);
+		transform-origin: 133.25px 495px;	
+	 }
+ }
+
+ @keyframes fallpetalcenterbottom {
+	0% {
+	   transform: rotate(0deg);
+	}
+	20% {
+		transform: rotate(-80deg);
+	}
+	40% {
+		transform: rotate(-85deg) ;
+		transform-origin: 87.75px 161.25px;
+	}
+	94% {
+		transform: rotate(-32deg) translateY(300px);
+		transform-origin: 133.25px 494.25px;
+	}
+	 100% {
+		transform: rotate(-32deg) translateY(300px);
+		transform-origin: 133.25px 494.25px;	
+	 }
+ }

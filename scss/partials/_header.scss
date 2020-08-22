@@ -1,90 +1,15 @@
 .site-title {
-	font-family:$sans-serif;
-	font-size: 2.5em;
-    line-height: 1em;
-	letter-spacing:4px;
-	text-transform:uppercase;
-	background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%3E%0A%20%20%3Cpath%20d%3D%22M411.98999%20354H462v108.47198H354v-50.01001h57.98999v-58.46198z%22%20fill%3D%22%236eadcf%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M100.01%20100.481H158v-50.01H50V158h50.01v-57.519z%22%20fill%3D%22%23df151a%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M304%2050.472h-96v50.01h96v-50.01z%22%20fill%3D%22%23fdc100%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M411.98999%20304H462v-96h-50.01001v96z%22%20fill%3D%22%2300bf00%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M354%2050.472v50.01h57.98999V158H462V50.472H354z%22%20fill%3D%22%23ff7f00%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M208%20462.47101h96V412.461h-96v50.01001z%22%20fill%3D%22%23007fff%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M100.01%20208.94299H50v96h50.01v-96z%22%20fill%3D%22%23ff8080%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M158%20462.47101V412.461h-57.99v-57.51801H50v107.52798h108v.00003z%22%20fill%3D%22%23a0f%22%20fill-opacity%3D%220.94118%22%2F%3E%0A%3C%2Fsvg%3E');
-	background-repeat:no-repeat;
-	background-position:top center;
-	background-size:5rem;
-	padding-top:5rem;
-	text-align:center;
-	margin-bottom:0;
-	a{
-		color:$color__text;
-	}
-}
-
-.site-description{
-	font-family:$header-serif;
-	text-transform:lowercase;
-	color:$light-gray;
-	text-align:center;
-	margin:0;
-}
-
-@media screen and (min-width: $bp-med) {
-	.header {
-		position:fixed;
-		top:0;
-		left:0;
-		z-index:1000;
-		background:#fff;
-		width:100%;
-		height:5rem;
-	}
-
-	.site-title {
-		position:absolute;
-		top:1rem;
-		right:6rem;
-		font-size:1.2em;
-		padding:0 0 0 1.8rem;
-		margin:0;
-		text-align:right;
-		background-position:center left;
-		background-size:1.3rem;
-	}
-
-	.site-description {
-		position:absolute;
-		top:2.3rem;
-		right:6.2rem;
-		font-size:1em;
-		text-align:right;
-	}
-}
-
-@media screen and (min-width: $bp-large) {
-	.header {
-		position:fixed;
-		top:0;
-		left:0;
-		background:$white;
-		width:35%;
-		height:100%;
-		border-right:8px solid #efefef;
-	}
-
-	.site-title {
-			position:relative;
-			top:0;
-			right:0;
-			font-size:1.9em;
-			padding:0;
-			text-align:right;
-			background-size:2rem;
-			width:15.6rem;
-			margin:60% auto 0;
-	}
-
-	.site-description {
-			margin:0 auto;
-			font-size:1.5em;
-			position:relative;
-			top:0;
-			left:0;
-			width:15.5rem;
+	align-items: start;
+	color: var(--color-site-title);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	abbr{
+		font-size: 0.35em;
+		letter-spacing: 0.125em;
+		line-height: 1.4em;
+		margin-right: 0.5em;
+		text-decoration-style: solid;
+		text-transform: uppercase;
 	}
 }

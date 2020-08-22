@@ -1,17 +1,32 @@
-/* TEAM */
+# humanstxt.org/
+# The human responsible & technology colophon
 
-Chief Pixel Surgeon: Dr. J. Ecker
-Contact: shinesandjecker.com/contact/
-Twitter: @drjecker
-Location: Portland, Maine, USA
+Jennifer Ecker
+a.k.a Dr. J. Ecker
+https://drjecker.com
+https://shinesandjecker.com
+https://twitter.com/drjecker
+https://github.com/drjecker
+Portland, ME, USA
 
-/* SITE */
+/* ****************************************************************************
+*   Website Info:
+**************************************************************************** */
 
-Standards: HTML5, CSS3
+Last updated: 2020.08.20
 
-Components:
-jQuery: 		http://jquery.com
-iconmonstr: 	http://iconmonstr.com/
-jQuery-One-Page-Nav:	https://github.com/davist11/jQuery-One-Page-Nav
-Scrollto: http://flesler.blogspot.com
-jQuery Easing: http://gsgd.co.uk/sandbox/jquery/easing/
+Source:
+https://github.com/drjecker/drjecker.github.io
+
+Technology:
+
+- HTML
+- Sass
+- JavaScript
+- GitHub hosting
+
+Assets:
+
+- Fonts from https://fonts.google.com/
+- Icons from https://iconmonstr.com/
+- Flower vector created by pikisuperstar - https://www.freepik.com

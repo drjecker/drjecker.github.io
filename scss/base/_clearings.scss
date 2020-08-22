@@ -1,21 +1,3 @@
-.site-header:before,
-.site-header:after,
-.nav:before,
-.nav:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	@include clearfix;
-}
-
-.site-header:after,
-.nav:after,
-.site-content:after,
-.site-footer:after {
-	@include clearfix-after;
-}
-
 .clear{
 	clear:both;
 }

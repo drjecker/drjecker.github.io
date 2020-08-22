@@ -1,36 +1,70 @@
 /*--------------------------------------------------------------
 Colors
 --------------------------------------------------------------*/
-$black:             	#000;
-$white:             	#fff;
-$light-gray:			#999;
+:root {
+	--color-black: hsl(215, 52%, 5%);
+	--color-yellow: hsl(53, 100%, 54%);
 
-$drjecker-pink:			#C95E62;
-$drjecker-green:    	#A3C46A;
-$drjecker-orange:		#E29600;
-$drjecker-blue:			#6EADCF;
+	--color-bg: hsl(49, 68%, 88%);
+	--color-bg-alt: hsl(49, 68%, 98%);
 
-$color__background:		$white;
+	--color-text: var(--color-black);
 
-$color__text:			#565656;
+	--color-site-title: var(--color-black);
 
-$color__link:        	$white;
-$color__link-visited:   $white;
-$color__link-hover:     $white;
+	--color-flower-fill: hsl(232, 47%, 60%);
+	--color-flower-green: #4E985F;
+	--color-flower-outline: var(--color-black);
+
+	--border-style: dotted;
+	--color-border: var(--color-text);
+
+	--color-link: var(--color-text);
+	--color-link--visited: var(--color-text);
+	--color-link--hover: var(--color-text);
+	--color-link--highlight: var(--color-yellow);
+
+	--color-heading: hsl(215, 52%, 10%);
+	--color-footer-text: hsl(215, 52%, 15%);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-black: hsl(215, 52%, 5%);
+
+		--color-bg: hsl(215, 52%, 18%);
+		--color-bg-alt: hsl(215, 52%, 20%);
+
+		--color-text: hsl(47, 83%, 98%);
+
+		--color-site-title: hsl(47, 83%, 80%);
+		
+		--color-flower-fill: hsl(326, 35%, 50%);
+		--color-flower-green: hsl(134, 32%, 35%);
+		--color-flower-outline: hsl(215, 52%, 10%);
+
+		--border-style: dotted;
+		--color-border: hsl(215, 52%, 10%);
+
+		--color-link: var(--color-text);
+		--color-link--visited: inherit;
+		--color-link--hover: var(--color-text);
+		--color-link--highlight: rgb(155, 75, 120);
+
+		--color-heading: hsl(0, 69%, 80%);
+		--color-footer-text: var(--color-text);
+	}
+}
 
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
-
-$sans-serif:        "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
-$header-serif:		"Courgette", cursive;
-
+$serif: "Playfair Display", Cambria, Times New Roman, Times, serif;
 
 /*--------------------------------------------------------------
 Breakpoints
 --------------------------------------------------------------*/
-$bp-small : 20em;
+$bp-sm : 20em;
 $bp-med : 46.8em;
-$bp-large : 70.313em;
+$bp-lg : 70.313em;
 $bp-xl : 92.500em;

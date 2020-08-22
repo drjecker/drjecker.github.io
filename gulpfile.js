@@ -1,75 +1,84 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-//var svgSprite = require('gulp-svg-sprite');
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
+//Based on article
+//https://www.webstoemp.com/blog/switching-to-gulp4/
+//https://github.com/jeromecoupe/jeromecoupe.github.io/blob/master/gulpfile.js
 
+"use strict";
 
-var sassinput = './scss/**/*.scss';
-var sassoutput = './css/';
-var spriteinput = './images/svgs/**/*.svg';
-var spriteoutput = './images/';
-var jsFiles = './js/**/*.js';
-var jsDest = './js';
+//npm init
+//npm install --save-dev gulp-autoprefixer
+const autoprefixer = require("autoprefixer");
+//npm install browser-sync gulp --save-dev
+const browsersync = require("browser-sync").create();
+//npm install gulp-cssnano --save-dev
+const cssnano = require("cssnano");
+//npm install gulp --save-dev
+const gulp = require("gulp");
+//npm install gulp-newer --save-dev
+const newer = require("gulp-newer");
+//npm install --save-dev gulp-plumber
+const plumber = require("gulp-plumber");
+//npm install --save-dev gulp-postcss
+const postcss = require("gulp-postcss");
+//npm install postcss-custom-properties --save-dev
+const postcssCustomProperties = require('postcss-custom-properties');
+//const rename = require("gulp-rename");
+//npm install gulp-sass --save-dev
+const sass = require("gulp-sass");
+//npm install gulp-sourcemaps --save-dev
+const sourcemaps = require('gulp-sourcemaps');
 
+const sassinput = './scss/**/*.scss';
+const sassoutput = './css/';
 
-var sassOptions = {
+const sassOptions = {
   errLogToConsole: true,
   outputStyle: 'compressed'
 };
 
-var config = {
-  mode: {
-    symbol: { // symbol mode to build the SVG
-      dest: 'sprite', // destination folder
-      sprite: 'sprite.svg', //sprite name
-      example: false // Build sample page
-    }
-  },
-  svg: {
-    xmlDeclaration: false, // strip out the XML attribute
-    doctypeDeclaration: false // don't include the !DOCTYPE declaration
-  }
+const autoprefixerOptions = {
+  browsers: ['last 2 versions', '> 5%']
 };
 
+//BrowserSync
+function browserSync(done) {
+  browsersync.init({
+    // server: {
+    //   baseDir: "./_site/"
+    // },
+    proxy: 'http://localhost:8888/',
+    //port: 3000,
+    open: false
+  });
+  done();
+}
 
-gulp.task('sass', function () {
+//BrowserSync Reload
+function browserSyncReload(done) {
+  browsersync.reload();
+  done();
+}
+
+//CSS task
+function css() {
   return gulp
     .src(sassinput)
     .pipe(sourcemaps.init())
+    .pipe(plumber())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(autoprefixer())
+    .pipe(postcss([autoprefixer(autoprefixerOptions), cssnano({reduceIdents: false}), postcssCustomProperties()]))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(sassoutput));
-});
+    .pipe(gulp.dest(sassoutput))
+    .pipe(browsersync.stream());
+}
 
-gulp.task('sprite-page', function() {
-  return gulp.src(spriteinput)
-    .pipe(svgSprite(config))
-    .pipe(gulp.dest(spriteoutput));
-});
+//Watch files
+function watchFiles() {
+  gulp.watch(sassinput, css);
+}
 
-gulp.task('sprite-shortcut', function() {
-  return gulp.src('sprite/sprite.svg')
-    .pipe(gulp.dest(spriteoutput));
-});
+// define complex tasks
+const watch = gulp.parallel(watchFiles, browserSync);
 
-gulp.task('scripts', function() {
-    return gulp.src(jsFiles)
-        .pipe(concat('scripts.js'))
-        .pipe(gulp.dest(jsDest))
-        .pipe(rename('scripts.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest(jsDest));
-});
-
-gulp.task('thesprites', ['sprite-page', 'sprite-shortcut']);
-
-
-//Watch task
-gulp.task('default',function() {
-    gulp.watch(sassinput,['sass']);
-});
+// export tasks
+exports.css = css;
+exports.watch = watch;

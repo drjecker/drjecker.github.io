@@ -10,7 +10,13 @@ html {
 }
 
 body {
-	background:$white;
+	background: var(--color-bg) radial-gradient(circle, var(--color-bg-alt), var(--color-bg)) no-repeat center center;
+
+	@media (min-width: $bp-lg) {
+		background-image: radial-gradient(circle at 20%, var(--color-bg-alt), var(--color-bg));
+	}
+
+	//background: radial-gradient(circle at 25%, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
 }
 
 p{
