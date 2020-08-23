@@ -23,7 +23,7 @@ Technology:
 - HTML
 - Sass
 - JavaScript
-- Theme switcher from https://hankchizljaw.com/wrote/create-a-user-controlled-dark-or-light-mode/
+- Dark/light theme switcher from https://hankchizljaw.com/wrote/create-a-user-controlled-dark-or-light-mode/
 
 Assets:
 
