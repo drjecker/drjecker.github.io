@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <!--
@@ -34,7 +34,7 @@
 	<link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600display=swap" />
 </noscript>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?ver=3.1">
 <link type="text/plain" rel="author" href="//drjecker.com/humans.txt" />
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -1032,7 +1032,17 @@
 					<span class="sr-only">@drjecker on Github</span>
 				</a>
 			</p>
+			<!-- Theme switcher from Andy Bell https://hankchizljaw.com/wrote/create-a-user-controlled-dark-or-light-mode/ -->
+			<div class="user-toggle">
+				<div role="status" class="sr-only [ js-mode-status ]"></div>
+				<button class="[ toggle-button ] [ js-mode-toggle ]">
+					<span class="[ toggle-button__text ] [ js-mode-toggle-text ]">Enable dark theme</span>
+					<span class="toggle-button__icon" aria-hidden="true"></span>
+				</button>
+			</div>
 		</footer>
 	</div>
+	<script defer type="text/javascript" src="/js/scripts.min.js?ver=3.1"></script>
+
 </body>
 </html>

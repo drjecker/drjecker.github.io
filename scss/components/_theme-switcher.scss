@@ -1,0 +1,23 @@
+.no-js .user-toggle {
+  display: none;
+}
+
+.user-toggle {
+  text-align: center;
+}
+
+.toggle-button {
+	background-color: transparent;
+	border: none;
+	color: currentColor;
+	display: inline-flex;
+	font-size: 0.825em;
+	padding: 0.25rem 1rem;
+	text-decoration: underline dotted;
+}
+
+.toggle-button:focus {
+  outline: 1px dotted currentColor;
+  outline-offset: 0.25em;
+  text-decoration: none;
+}

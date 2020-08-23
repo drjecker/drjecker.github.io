@@ -2,6 +2,8 @@
 Colors
 --------------------------------------------------------------*/
 :root {
+	--color-mode: 'light';
+
 	--color-black: hsl(215, 52%, 5%);
 	--color-yellow: hsl(53, 100%, 54%);
 
@@ -28,8 +30,38 @@ Colors
 	--color-footer-text: hsl(215, 52%, 15%);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark){
 	:root {
+		--color-mode: 'dark';
+	  }
+	  
+	:root:not([data-user-color-scheme]) {
+	  	--color-black: hsl(215, 52%, 5%);
+
+		--color-bg: hsl(215, 52%, 18%);
+		--color-bg-alt: hsl(215, 52%, 20%);
+
+		--color-text: hsl(47, 83%, 98%);
+
+		--color-site-title: hsl(47, 83%, 80%);
+		
+		--color-flower-fill: hsl(326, 35%, 50%);
+		--color-flower-green: hsl(134, 32%, 35%);
+		--color-flower-outline: hsl(215, 52%, 10%);
+
+		--border-style: dotted;
+		--color-border: hsl(215, 52%, 10%);
+
+		--color-link: var(--color-text);
+		--color-link--visited: inherit;
+		--color-link--hover: var(--color-text);
+		--color-link--highlight: rgb(155, 75, 120);
+
+		--color-heading: hsl(0, 69%, 80%);
+		--color-footer-text: var(--color-text);
+	}
+
+	[data-user-color-scheme="dark"] {
 		--color-black: hsl(215, 52%, 5%);
 
 		--color-bg: hsl(215, 52%, 18%);
