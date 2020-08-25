@@ -56,3 +56,10 @@ h2, .h2 {
 		margin-top: calc(-0.5ch + 0.0625em);
 	}
 }
+
+.amp {
+	color: var(--color-amp-text);
+	.heading-border & {
+		margin: 0 0.75ch;
+	}
+}
